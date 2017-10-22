@@ -1,0 +1,3 @@
+use :
+g++ main.cpp supoort.cpp -o write
+//write is a output file
