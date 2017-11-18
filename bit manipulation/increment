@@ -1,0 +1,32 @@
+// add one to the number
+using namespace std;
+#include<iostream>
+int increment(int );
+int main()
+{
+	int number;
+	cout<<"Enter number: ";
+	cin>>number;
+	cout<<endl;
+	int result=increment(number);
+	cout<<"Incremented number is: ";
+	cout<<result;
+	return 0;
+}
+int increment(int x)
+{
+	int m = 1;//00000001
+ 
+  /* Flip all the set bits until we find a 0 */
+  while( x & m )
+  {
+    x = x^m;// bit wise xor (flip the bits until we find a zero i.e. flip all the 
+    						// ones starting from left.)
+    m <<= 1;//right shift m (00001--->00010--->00100--->...)
+  }
+ 
+  /* flip the rightmost 0 bit */
+  x = x^m;
+  return x;
+}
+
