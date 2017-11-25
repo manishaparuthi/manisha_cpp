@@ -18,7 +18,7 @@ int main()
 {
 	vector<vector<int> > A ({{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}}); 
 
-	vector<vector<int> > B = performOps(&A);
+	vector<vector<int> > B = performOps(A);
 
 	for (int i = 0; i < B.size(); i++)
 	{
