@@ -49,7 +49,7 @@ void reverseWords(string &A)
      int init=-1;
     int fin=0;
     int i=0;
-    while(i<=totalspace)
+    while(i<totalspace)
     {
         //cout<<endl<<"init: "<<init;
         fin=findnextspace(init,A);
@@ -61,7 +61,8 @@ void reverseWords(string &A)
        init=fin;
         i++;
     }
-
+    fin=A.size();
+    reverseword(init+1,fin-1,A);
    reverseword(0,A.size()-1, A);
 }
 int main()
