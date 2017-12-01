@@ -54,7 +54,7 @@ int main()
 		number=number-1;
 	}// end while
 	cout<<endl;
-	cout<<" largest number with given sum of digits is: "<<result;
+	cout<<"largest number with given sum of digits is: "<<result;
   }// end else
  return 0;
 }
