@@ -1,25 +1,26 @@
-
-
 using namespace std;
 #include<string>
 #include<iostream>
-bool check_subsequence(string A,string B)
+#include<vector>
+bool check_subsequence(vector<string> A,vector<string> B)
 {
     int m=A.size();
     int n=B.size();
+    if(m<n)
+        return false;
     int i=0;
     int j=0;
     while(i<m&&j<n)
     {
-        if(A[i]==B[j])
+        if(!B[j].compare(A[i]))
         {
             i++;
             j++;
         }
         else
-        j++;
+        i++;
     }
-    if (i==m)
+    if (j==n)
     {
         return 1;
     }
@@ -28,13 +29,38 @@ bool check_subsequence(string A,string B)
 }
 int main()
 {
-    string a,b;
-    cout<<"enter String A:";
-    getline(cin,a);
-    cout<<"enter string B:";
-    getline(cin,b);
+    vector<string> a;
+    vector<string> b;
+    cout<<"Enter events A:";
+    bool acontinue=true;
+    do
+    {
+        string atemp;
+        getline(cin,atemp);
+        if(!atemp.compare("exit"))
+        {
+            acontinue=false;
+        }
+        else
+            a.push_back(atemp);
+    }while(acontinue);
+   
+    cout<<"Enter events B:";
+    bool bcontinue=true;
+    do
+    {
+        string btemp;
+        getline(cin,btemp);
+        if(!btemp.compare("exit"))
+        {
+            bcontinue=false;
+        }
+        else
+            b.push_back(btemp);
+    }while(bcontinue);
+   
     if(check_subsequence(a,b))
-    cout<<"yes";
+    cout<<"\nyes,list of events b is a subsequence of events b";
     else
     cout<<"no";
 
