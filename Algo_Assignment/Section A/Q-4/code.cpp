@@ -9,17 +9,11 @@ int billboardConst( int M, int n, int x, int position[], int revenue[] )
 {
 
 	int maxRev[M+1];
-	bool billboardPos[n];
 
 	for ( int i=0; i <= M; i++) {
 		maxRev[i] = 0;
 	}
 	int next = 0;
-
-	
-	for( int i=0; i < n; i++ ) 
-		billboardPos[i] = 0;
-
 
 	for ( int i = 1; i <= M; i++ ) 
 	{
