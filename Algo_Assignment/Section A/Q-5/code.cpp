@@ -41,34 +41,8 @@ int main()
         a.push_back(atemp);
     }
     eventAfile.close();
-   /* bool acontinue=true;
-    do
-    {
-        string atemp;
-        getline(cin,atemp);
-        if(!atemp.compare("exit"))
-        {
-            acontinue=false;
-        }
-        else
-            a.push_back(atemp);
-    }while(acontinue);
    
-    cout<<"Enter events B:";
-    bool bcontinue=true;
-    do
-    {
-        string btemp;
-        getline(cin,btemp);
-        if(!btemp.compare("exit"))
-        {
-            bcontinue=false;
-        }
-        else
-            b.push_back(btemp);
-    }while(bcontinue);
-   */
-    cout<<"Events B reading from file......";
+    cout<<"\nEvents B reading from file......";
     string btemp;;
     ifstream eventBfile;
     eventBfile.open("eventsB.txt");
