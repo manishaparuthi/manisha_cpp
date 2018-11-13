@@ -5,9 +5,9 @@ using namespace std;
 
 struct Edge 
 {
-	int src;	
-	int dest;	
-	int weight;	
+	int src;	//source
+	int dest;	//destination
+	int weight;	//weight
 };
 
 struct Graph 
@@ -30,12 +30,12 @@ void bellmanFord(struct Graph *g, int source)
 
 	int i, j, u, v, w;
 	
-	int dist[vertices];
-	int pred[vertices];
+	int dist[vertices];//for storing distance 
+	int pred[vertices];// for storing predecessor
 	
 	for (i = 0; i < vertices; i++) 
         {
-		dist[i] = INF;
+		dist[i] = INF;   //initialisation
 		pred[i] = -1;
 	}
 	
@@ -43,12 +43,12 @@ void bellmanFord(struct Graph *g, int source)
 	dist[source] = 0;
 	
 	
-	for(i = 1; i <= vertices-1; i++) 
+	for(i = 1; i <= vertices-1; i++) 	//loop for V-1 times
         {
 		for(j = 0; j < edges; j++) 
                 {
 			
-			u = g->edge[j].src;
+			u = g->edge[j].src;		//update 
 			v = g->edge[j].dest;
 			w = g->edge[j].weight;
 			
