@@ -1,16 +1,17 @@
 using namespace std;
 #include <iostream>
 
-int max(int a,int b)
+int max(int a,int b)//return max of two integers
 {
 	return a < b ? b : a;
 }
 int billboardConst( int M, int n, int x, int position[], int revenue[] ) 
 {
+//position of billboards :position[]
+	int maxRev[M+1];//store revenue at each mile
 
-	int maxRev[M+1];
-
-	for ( int i=0; i <= M; i++) {
+	for ( int i=0; i <= M; i++) //initialisation
+	{
 		maxRev[i] = 0;
 	}
 	int next = 0;
@@ -20,7 +21,7 @@ int billboardConst( int M, int n, int x, int position[], int revenue[] )
 
 		if ( next < n ) 
 		{
-			if ( position[next] != i ) 
+			if ( position[next] != i ) // if billboard has been placed at i else copy the previous maximum revenue. 
 			{
 
 				maxRev[i] = maxRev[i-1];
@@ -28,13 +29,15 @@ int billboardConst( int M, int n, int x, int position[], int revenue[] )
 
 			else 
 			{
-				if ( i <= x ) 
+				if ( i <= x )//if current pos <= x, then we can have only one billboard. 
+               
 				{ 
 					
 						maxRev[i] = max(maxRev[i-1],revenue[next]);
 				}
 
-				else 
+				else //remove previously placed 
+                 
 				{
 						maxRev[i] = max(maxRev[i-x-1]+revenue[next],maxRev[i-1]);
 						
