@@ -4,7 +4,7 @@
 using namespace std;
 
 int solutionno=0;
-void printSolution(int* board,int N) 
+void printSolution(int* board,int N) //for printing board
 { 
     for (int i = 0; i < N; i++) 
     { 
@@ -20,7 +20,7 @@ void printSolution(int* board,int N)
 } 
   
 
-bool isSafe(int *board, int row, int col,int N) 
+bool isSafe(int *board, int row, int col,int N) //to check is it safe to place queen at board[row][col]
 { 
     int i, j; 
   
