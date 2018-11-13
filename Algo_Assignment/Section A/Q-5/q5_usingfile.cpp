@@ -5,21 +5,21 @@ using namespace std;
 #include<fstream>
 bool check_subsequence(vector<string> A,vector<string> B)
 {
-    int m=A.size();
-    int n=B.size();
-    if(m<n)
-        return false;
+    int m=A.size(); //size of sequence
+    int n=B.size(); //size of subsequence
+    if(m < n)
+        return false;   
     int i=0;
     int j=0;
     while(i<m&&j<n)
     {
-        if(!B[j].compare(A[i]))
+        if(!B[j].compare(A[i]))// if there is a match check next characters of both sequence and sub-sequence
         {
             i++;
             j++;
         }
         else
-        i++;
+        i++;//check next char of sequence with current char of subsequence
     }
     if (j==n)
     {
