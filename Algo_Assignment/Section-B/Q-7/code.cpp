@@ -63,9 +63,11 @@ int main()
   }
 
     
+ int share_num = 1000;
+ cout<<"\nNumber of Shares are: "<<share_num; 
   int max_profit = maximumProfit(price);
   if(max_profit > 0)
-  	cout << "\nMaximum profit earned is " << max_profit;
+  	cout << "\nMaximum profit earned is " << share_num * max_profit;
   
   cout<<endl;
   return 0; 
