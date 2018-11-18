@@ -7,7 +7,7 @@ vector<pair<string,string>> arr;//global array to store card no. and bank accoun
 
 
 bool equivalenceTester(string cardA,string cardB) // check the equivalence of cards,
-{													//cards are equivalent if they correspond to same account
+{						//cards are equivalent if they correspond to same account
   
 	string A,B;
 	for(int i=0;i<arr.size();i++)
