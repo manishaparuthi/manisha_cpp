@@ -1,4 +1,4 @@
-## Output when Majority Element is present
+## Output when Maximum Profit is present
 ![output1](./output1.png)
-## Output when Majority Element is not present
+## Output when Maximum Profit is not present
 ![output2](./output2.png)
