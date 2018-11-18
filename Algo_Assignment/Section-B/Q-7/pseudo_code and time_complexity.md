@@ -1,5 +1,7 @@
 # Algorithm 
-
+### Assumption: 
+It is assumed that we will buy on some day and sell on some later day,means we will not buy multiple times 
+ (we can do only one transaction).
 
     Procedure max_profit(price[1...n]):
     Input : Array Price of size n
