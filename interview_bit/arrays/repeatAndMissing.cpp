@@ -26,11 +26,9 @@ vector<int> Solution::repeatedNumber(const vector<int> &A) {
     for (int i = 1; i <= n; i++) 
     { 
         if (i & set_bit_no) 
-            x = x ^ i; /* XOR of first set in arr[] and 
-                         {1, 2, ...n }*/
+            x = x ^ i; 
         else
-            y = y ^ i; /* XOR of second set in arr[] and 
-                         {1, 2, ...n } */
+            y = y ^ i; 
     } 
     
   int flagx=0;
